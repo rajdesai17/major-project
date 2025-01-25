@@ -1,40 +1,124 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  </head>
-  <body>
-    <div class="container my-4 mt-4">
+    <title>Medical Help - Contact</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="logo">
+                <img class="myimg" src="{{ url_for('static', filename='img.png') }}" alt="">
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<h4>      Contact Us
-</h4>
-<p>Have questions or need assistance? We're here to help!
-</p>
-<h4>Customer Support
-</h4>
-<p>Our dedicated customer support team is available to assist you with any inquiries or issues you may have. Whether it's a technical question, feedback, or a general inquiry, we're just a message away.
-</p>
-<h4>Get in Touch
-</h4>
-<p>Feel free to reach out to us via email or through the contact form below. We value your feedback and are committed to providing you with the best possible experience.
-</p>
-<p><b>Email:</b> helpmedical@gmail.com</p>
-<p><b>Phone:</b> 9199xxxxxx</p>
+    <!-- Main Content -->
+    <div class="container my-5">
+        <h1 class="text-center mb-5" style="color: #4a90e2;">Find Local Medical Help</h1>
+        
+        <!-- City Selector -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-6">
+                <select class="form-select form-select-lg" id="citySelector" onchange="showHospitals(this.value)">
+                    <option selected disabled>Select City</option>
+                    <option value="kankavli">Kankavli</option>
+                    <option value="sawantwadi">Sawantwadi</option>
+                </select>
+            </div>
+        </div>
 
+        <!-- Kankavli Hospitals -->
+        <div class="row" id="kankavli-hospitals" style="display: none;">
+            <h2 class="text-center mb-4">Hospitals in Kankavli</h2>
+            <div class="col-md-4 mb-4">
+                <div class="hospital-card">
+                    <div class="hospital-icon"><i class="fas fa-hospital"></i></div>
+                    <h3>District Hospital Kankavli</h3>
+                    <p>Location: Main Road, Kankavli</p>
+                    <p>Contact: +91 2367 232462</p>
+                    <p>Emergency: 108</p>
+                    <div class="hospital-services">
+                        <span class="badge bg-primary">24/7 Emergency</span>
+                        <span class="badge bg-info">ICU</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="hospital-card">
+                    <div class="hospital-icon"><i class="fas fa-hospital-user"></i></div>
+                    <h3>Joshi Hospital</h3>
+                    <p>Location: Station Road, Kankavli</p>
+                    <p>Contact: +91 2367 232777</p>
+                    <div class="hospital-services">
+                        <span class="badge bg-success">OPD</span>
+                        <span class="badge bg-warning">Pharmacy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<h4>Stay Connected</h4>
-<p>Stay up-to-date with the latest news, updates, and health tips by following us on social media. Connect with us on Facebook or Instagram to join our growing community.
-</p>
-<h4>Location
-</h4>
-<p>Kankavli, Maharahstra, India</p>
-
-
-
+        <!-- Sawantwadi Hospitals -->
+        <div class="row" id="sawantwadi-hospitals" style="display: none;">
+            <h2 class="text-center mb-4">Hospitals in Sawantwadi</h2>
+            <div class="col-md-4 mb-4">
+                <div class="hospital-card">
+                    <div class="hospital-icon"><i class="fas fa-hospital"></i></div>
+                    <h3>Civil Hospital Sawantwadi</h3>
+                    <p>Location: Civil Hospital Road</p>
+                    <p>Contact: +91 2363 272063</p>
+                    <p>Emergency: 108</p>
+                    <div class="hospital-services">
+                        <span class="badge bg-primary">24/7 Emergency</span>
+                        <span class="badge bg-danger">Blood Bank</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="hospital-card">
+                    <div class="hospital-icon"><i class="fas fa-hospital-user"></i></div>
+                    <h3>Parkar Hospital</h3>
+                    <p>Location: Main Road, Sawantwadi</p>
+                    <p>Contact: +91 2363 272888</p>
+                    <div class="hospital-services">
+                        <span class="badge bg-success">OPD</span>
+                        <span class="badge bg-info">Lab Services</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-  </body>
+
+    <script>
+        function showHospitals(city) {
+            document.getElementById('kankavli-hospitals').style.display = 'none';
+            document.getElementById('sawantwadi-hospitals').style.display = 'none';
+            document.getElementById(`${city}-hospitals`).style.display = 'flex';
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

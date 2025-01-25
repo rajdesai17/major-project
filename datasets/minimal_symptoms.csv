@@ -1,0 +1,51 @@
+Disease,Symptom_1,Symptom_2,Symptom_3,Symptom_4
+Common Cold,continuous_sneezing,chills,fatigue,cough
+Common Cold,runny_nose,sore_throat,headache,mild_fever
+Flu (Influenza),fever,cough,sore_throat,muscle_aches
+Flu (Influenza),high_fever,chills,fatigue,body_pain
+COVID-19,fever,cough,loss_of_taste,shortness_of_breath
+COVID-19,headache,fatigue,sore_throat,body_pain
+Asthma,breathlessness,cough,wheezing,chest_tightness
+Allergies,continuous_sneezing,itchy_eyes,skin_rash,breathlessness
+Sinusitis,headache,facial_pain,stuffy_nose,runny_nose
+Bronchitis,persistent_cough,chest_discomfort,wheezing,fatigue
+Pneumonia,high_fever,cough,shortness_of_breath,chest_pain
+Tonsillitis,sore_throat,fever,swollen_tonsils,difficulty_swallowing
+Urinary Tract Infection,burning_micturition,frequent_urination,bladder_discomfort,foul_smelling_urine
+Kidney Stones,severe_flank_pain,nausea,blood_in_urine,vomiting
+Appendicitis,abdominal_pain,fever,nausea,vomiting
+Diabetes,frequent_urination,excessive_thirst,unexplained_weight_loss,blurred_vision
+Hypertension,headache,dizziness,shortness_of_breath,chest_pain
+Anemia,fatigue,pale_skin,shortness_of_breath,dizziness
+Hypothyroidism,weight_gain,fatigue,dry_skin,hair_loss
+Hyperthyroidism,weight_loss,heat_intolerance,heart_palpitations,tremors
+Chickenpox,fever,itchy_skin_rash,fluid-filled_blisters,fatigue
+Measles,fever,cough,runny_nose,red_rash
+Dengue,fever,severe_headache,muscle_pain,rash
+Malaria,fever,chills,sweating,headache
+Typhoid,high_fever,abdominal_pain,constipation,weakness
+Gastroenteritis,nausea,vomiting,diarrhoea,abdominal_pain
+Irritable Bowel Syndrome,abdominal_pain,bloating,diarrhoea,constipation
+Peptic Ulcer,abdominal_pain,bloating,nausea,heartburn
+Arthritis,joint_pain,stiffness,swelling,limited_movement
+Osteoporosis,bone_pain,fragility,loss_of_height,back_pain
+Migraine,headache,nausea,sensitivity_to_light,blurred_vision
+Epilepsy,seizures,confusion,loss_of_consciousness,jerking_movements
+Parkinson’s Disease,tremors,stiffness,slow_movement,loss_of_balance
+Stroke,slurred_speech,weakness_on_one_side,sudden_confusion,sudden_headache
+Alzheimer’s Disease,memory_loss,confusion,personality_changes,difficulty_speaking
+Hepatitis,jaundice,abdominal_pain,fatigue,loss_of_appetite
+Liver Disease,abdominal_pain,jaundice,swelling,fatigue
+Celiac Disease,diarrhoea,weight_loss,bloating,abdominal_pain
+Rheumatoid Arthritis,joint_pain,swelling,morning_stiffness,fatigue
+Psoriasis,red_skin_patches,scaling,itching,cracked_skin
+Eczema,itchy_skin,redness,dryness,blisters
+Shingles,painful_rash,blisters,itching,fever
+Hypoglycemia,sweating,shakiness,confusion,hunger
+Hyperglycemia,frequent_urination,thirst,blurred_vision,fatigue
+Stress,anxiety,fatigue,headache,mood_swings
+Vitamin D Deficiency,bone_pain,fatigue,muscle_weakness,mood_changes
+Scabies,itchy_skin,rash,blisters,sores
+Conjunctivitis,red_eyes,itching,tearing,discharge
+Vertigo,dizziness,nausea,loss_of_balance,ringing_in_ears
+Otitis Media,ear_pain,hearing_loss,fever,irritability

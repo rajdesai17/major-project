@@ -1,4 +1,4 @@
-,Disease,Symptom_1,Symptom_2,Symptom_3,Symptom_4
+Disease,Symptom_1,Symptom_2,Symptom_3,Symptom_4
 0,Fungal infection,itching, skin_rash, nodal_skin_eruptions, dischromic _patches
 1,Fungal infection, skin_rash, nodal_skin_eruptions, dischromic _patches,
 2,Fungal infection,itching, nodal_skin_eruptions, dischromic _patches,

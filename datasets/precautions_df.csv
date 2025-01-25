@@ -1,42 +1,42 @@
-,Disease,Precaution_1,Precaution_2,Precaution_3,Precaution_4
-0,Drug Reaction,stop irritation,consult nearest hospital,stop taking drug,follow up
-1,Malaria,Consult nearest hospital,avoid oily food,avoid non veg food,keep mosquitos out
-2,Allergy,apply calamine,cover area with bandage,,use ice to compress itching
-3,Hypothyroidism,reduce stress,exercise,eat healthy,get proper sleep
-4,Psoriasis,wash hands with warm soapy water,stop bleeding using pressure,consult doctor,salt baths
-5,GERD,avoid fatty spicy food,avoid lying down after eating,maintain healthy weight,exercise
-6,Chronic cholestasis,cold baths,anti itch medicine,consult doctor,eat healthy
-7,hepatitis A,Consult nearest hospital,wash hands through,avoid fatty spicy food,medication
-8,Osteoarthristis,acetaminophen,consult nearest hospital,follow up,salt baths
-9,(vertigo) Paroymsal  Positional Vertigo,lie down,avoid sudden change in body,avoid abrupt head movment,relax
-10,Hypoglycemia,lie down on side,check in pulse,drink sugary drinks,consult doctor
-11,Acne,bath twice,avoid fatty spicy food,drink plenty of water,avoid too many products
-12,Diabetes ,have balanced diet,exercise,consult doctor,follow up
-13,Impetigo,soak affected area in warm water,use antibiotics,remove scabs with wet compressed cloth,consult doctor
-14,Hypertension ,meditation,salt baths,reduce stress,get proper sleep
-15,Peptic ulcer diseae,avoid fatty spicy food,consume probiotic food,eliminate milk,limit alcohol
-16,Dimorphic hemmorhoids(piles),avoid fatty spicy food,consume witch hazel,warm bath with epsom salt,consume alovera juice
-17,Common Cold,drink vitamin c rich drinks,take vapour,avoid cold food,keep fever in check
-18,Chicken pox,use neem in bathing ,consume neem leaves,take vaccine,avoid public places
-19,Cervical spondylosis,use heating pad or cold pack,exercise,take otc pain reliver,consult doctor
-20,Hyperthyroidism,eat healthy,massage,use lemon balm,take radioactive iodine treatment
-21,Urinary tract infection,drink plenty of water,increase vitamin c intake,drink cranberry juice,take probiotics
-22,Varicose veins,lie down flat and raise the leg high,use oinments,use vein compression,dont stand still for long
-23,AIDS,avoid open cuts,wear ppe if possible,consult doctor,follow up
-24,Paralysis (brain hemorrhage),massage,eat healthy,exercise,consult doctor
-25,Typhoid,eat high calorie vegitables,antiboitic therapy,consult doctor,medication
-26,Hepatitis B,consult nearest hospital,vaccination,eat healthy,medication
-27,Fungal infection,bath twice,use detol or neem in bathing water,keep infected area dry,use clean cloths
-28,Hepatitis C,Consult nearest hospital,vaccination,eat healthy,medication
-29,Migraine,meditation,reduce stress,use poloroid glasses in sun,consult doctor
-30,Bronchial Asthma,switch to loose cloothing,take deep breaths,get away from trigger,seek help
-31,Alcoholic hepatitis,stop alcohol consumption,consult doctor,medication,follow up
-32,Jaundice,drink plenty of water,consume milk thistle,eat fruits and high fiberous food,medication
-33,Hepatitis E,stop alcohol consumption,rest,consult doctor,medication
-34,Dengue,drink papaya leaf juice,avoid fatty spicy food,keep mosquitos away,keep hydrated
-35,Hepatitis D,consult doctor,medication,eat healthy,follow up
-36,Heart attack,call ambulance,chew or swallow asprin,keep calm,
-37,Pneumonia,consult doctor,medication,rest,follow up
-38,Arthritis,exercise,use hot and cold therapy,try acupuncture,massage
-39,Gastroenteritis,stop eating solid food for while,try taking small sips of water,rest,ease back into eating
-40,Tuberculosis,cover mouth,consult doctor,medication,rest
+Disease,Precaution_1,Precaution_2,Precaution_3,Precaution_4
+Drug Reaction,stop using the irritant,consult a doctor immediately,follow up regularly,avoid self-medication
+Malaria,consult nearest hospital,use mosquito nets,apply insect repellents,avoid stagnant water
+Allergy,apply calamine lotion,use antihistamines,avoid known allergens,consult a doctor if severe
+Hypothyroidism,manage stress,exercise regularly,follow a thyroid-friendly diet,get adequate sleep
+Psoriasis,use moisturizer regularly,avoid scratching,consult a dermatologist,try oatmeal baths
+GERD,eat smaller meals,avoid spicy food,elevate the head while sleeping,maintain a healthy weight
+Chronic cholestasis,keep skin moisturized,avoid alcohol,consult a specialist,follow prescribed medication
+Hepatitis A,get vaccinated,practice good hygiene,avoid fatty foods,drink clean water
+Osteoarthritis,stay active,apply heat or cold to joints,maintain a healthy weight,consult a rheumatologist
+(Vertigo) Paroxysmal Positional Vertigo,avoid sudden head movements,stay hydrated,rest when dizzy,consult a doctor
+Hypoglycemia,consume glucose immediately,monitor blood sugar levels,eat small frequent meals,consult a doctor
+Acne,cleanse skin gently,avoid greasy products,eat a balanced diet,stay hydrated
+Diabetes,maintain a healthy diet,exercise regularly,monitor blood sugar,visit your doctor periodically
+Impetigo,clean affected areas gently,apply topical antibiotics,avoid touching affected areas,consult a doctor
+Hypertension,reduce sodium intake,practice mindfulness,stay physically active,get regular checkups
+Peptic Ulcer Disease,avoid NSAIDs,consume probiotics,limit spicy foods,consult a gastroenterologist
+Hemorrhoids,consume high-fiber foods,drink plenty of fluids,avoid straining during bowel movements,use sitz baths
+Common Cold,stay hydrated,use a humidifier,rest and recover,avoid cold exposure
+Chickenpox,avoid scratching,use calamine lotion,bathe in lukewarm water,consult a doctor if severe
+Cervical Spondylosis,practice good posture,perform neck exercises,apply hot or cold packs,seek medical advice
+Hyperthyroidism,avoid iodine-rich food,manage stress,consult a doctor,consider radioactive iodine treatment
+Urinary Tract Infection,stay hydrated,practice good hygiene,consume cranberry juice,consult a doctor
+Varicose Veins,elevate legs while resting,avoid prolonged standing,wear compression stockings,stay active
+AIDS,practice safe sex,avoid sharing needles,maintain a healthy lifestyle,consult a specialist regularly
+Paralysis (Brain Hemorrhage),attend physical therapy,eat nutrient-rich food,follow medical advice,get regular checkups
+Typhoid,consume easily digestible foods,complete prescribed antibiotics,stay hydrated,practice hygiene
+Hepatitis B,get vaccinated,practice safe sex,avoid alcohol,consult a hepatologist
+Fungal Infection,keep the area dry,avoid tight clothing,use antifungal cream,maintain good hygiene
+Hepatitis C,avoid sharing personal items,get vaccinated,consult a specialist,follow medication
+Migraine,reduce stress,follow a consistent sleep schedule,avoid triggers like caffeine,consult a neurologist
+Bronchial Asthma,identify and avoid triggers,use prescribed inhalers,stay active but avoid overexertion,seek medical attention for severe episodes
+Alcoholic Hepatitis,stop alcohol consumption,eat a balanced diet,consult a doctor,follow regular checkups
+Jaundice,stay hydrated,eat liver-friendly foods,avoid alcohol,consult a specialist
+Hepatitis E,avoid alcohol,maintain proper hygiene,stay hydrated,consult a doctor
+Dengue,stay hydrated,consume papaya leaf extract,avoid mosquito bites,consult a doctor if symptoms worsen
+Hepatitis D,get vaccinated,avoid alcohol,maintain a healthy diet,consult a hepatologist
+Heart Attack,call emergency services,chew aspirin,stay calm and still,follow up with cardiologist
+Pneumonia,complete prescribed antibiotics,rest adequately,drink warm fluids,consult a doctor if symptoms persist
+Arthritis,stay active with joint-friendly exercises,use heat or cold therapy,maintain a healthy weight,consult a rheumatologist
+Gastroenteritis,drink oral rehydration solution,eat bland food,avoid dairy temporarily,rest
+Tuberculosis,complete the prescribed treatment,avoid crowded places,eat nutrient-rich food,consult a pulmonologist
