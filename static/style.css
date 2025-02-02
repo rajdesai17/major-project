@@ -259,6 +259,8 @@ body {
     text-align: center;
     transition: transform 0.3s;
     margin: 15px;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .hospital-card:hover {
@@ -308,4 +310,10 @@ body {
 #citySelector:focus {
     outline: none;
     border-color: #4a90e2;
+}
+
+[id$="-hospitals"] {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
 }
