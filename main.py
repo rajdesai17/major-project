@@ -89,19 +89,36 @@ def get_predicted_value(user_symptoms):
         print(f"Error in prediction: {e}")
         return None
 
+def generate_disease_description(disease_name):
+    """Generate detailed disease description using Gemini"""
+    prompt = f"""Provide a brief, clear description of {disease_name} in 2-3 sentences. Include:
+1. What it is
+2. Most common symptoms
+3. Basic cause
+
+Keep it simple and concise, around 50-60 words total. Write in paragraph form, not bullet points."""
+
+    try:
+        model = genai.GenerativeModel('gemini-pro')
+        response = model.generate_content(prompt)
+        # Clean up any bullet points or special characters
+        description = response.text.strip()
+        description = description.replace('•', '').replace('*', '').replace('\n', ' ')
+        return description
+    except Exception as e:
+        print(f"Error generating disease description: {e}")
+        return "Unable to generate disease description at the moment."
+
 def helper(dis):
     """Get disease information"""
     try:
-        # Get description - case insensitive matching
-        dis_des = description[description['Disease'].str.lower() == dis.lower()]['Description'].iloc[0] \
-            if not description[description['Disease'].str.lower() == dis.lower()].empty \
-            else "No description available"
+        # Generate description using Gemini
+        dis_des = generate_disease_description(dis)
         
         # Get precautions
         prec_df = precautions[precautions['Disease'] == dis]
         my_precautions = []
         if not prec_df.empty:
-            # Get all precautions from columns Precaution_1 to Precaution_4
             for i in range(1, 5):
                 prec = prec_df[f'Precaution_{i}'].iloc[0]
                 if isinstance(prec, str) and prec.strip():

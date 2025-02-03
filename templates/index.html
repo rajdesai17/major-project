@@ -88,8 +88,12 @@
 
 {% if predicted_disease %}
 <div class="prediction-result">
-    <div class="disease-name">Your symptoms match with: <strong>{{ predicted_disease }}</strong></div>
-    <div class="disease-description">{{ dis_des }}</div>
+    <div class="disease-name">
+        Your symptoms match with: <strong>{{ predicted_disease }}</strong>
+    </div>
+    <div class="disease-description">
+        {{ dis_des | safe }}
+    </div>
 </div>
 
 <!-- Results section -->

@@ -194,26 +194,45 @@ body {
 
 .prediction-result {
     background: #e8f4ff;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px 0;
-    text-align: left;
+    padding: 25px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .prediction-result .disease-name {
-    font-size: 1.2em;
-    margin-bottom: 15px;
+    font-size: 1.4em;
+    margin-bottom: 20px;
     text-align: center;
     color: #2c3e50;
+    font-weight: 600;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(74, 144, 226, 0.2);
 }
 
 .prediction-result .disease-description {
-    font-size: 1em;
-    line-height: 1.6;
+    font-size: 1.1em;
+    line-height: 1.8;
     color: #34495e;
-    padding: 10px;
+    padding: 20px;
     background: rgba(255, 255, 255, 0.7);
-    border-radius: 5px;
+    border-radius: 10px;
+    text-align: justify;
+}
+
+.disease-description strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.disease-description ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.disease-description li {
+    margin: 5px 0;
 }
 
 .modal-header {
