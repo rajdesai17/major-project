@@ -1,42 +1,65 @@
 Disease,Precaution_1,Precaution_2,Precaution_3,Precaution_4
-Drug Reaction,stop using the irritant,consult a doctor immediately,follow up regularly,avoid self-medication
-Malaria,consult nearest hospital,use mosquito nets,apply insect repellents,avoid stagnant water
-Allergy,apply calamine lotion,use antihistamines,avoid known allergens,consult a doctor if severe
-Hypothyroidism,manage stress,exercise regularly,follow a thyroid-friendly diet,get adequate sleep
-Psoriasis,use moisturizer regularly,avoid scratching,consult a dermatologist,try oatmeal baths
-GERD,eat smaller meals,avoid spicy food,elevate the head while sleeping,maintain a healthy weight
-Chronic cholestasis,keep skin moisturized,avoid alcohol,consult a specialist,follow prescribed medication
-Hepatitis A,get vaccinated,practice good hygiene,avoid fatty foods,drink clean water
-Osteoarthritis,stay active,apply heat or cold to joints,maintain a healthy weight,consult a rheumatologist
-(Vertigo) Paroxysmal Positional Vertigo,avoid sudden head movements,stay hydrated,rest when dizzy,consult a doctor
-Hypoglycemia,consume glucose immediately,monitor blood sugar levels,eat small frequent meals,consult a doctor
-Acne,cleanse skin gently,avoid greasy products,eat a balanced diet,stay hydrated
-Diabetes,maintain a healthy diet,exercise regularly,monitor blood sugar,visit your doctor periodically
-Impetigo,clean affected areas gently,apply topical antibiotics,avoid touching affected areas,consult a doctor
-Hypertension,reduce sodium intake,practice mindfulness,stay physically active,get regular checkups
-Peptic Ulcer Disease,avoid NSAIDs,consume probiotics,limit spicy foods,consult a gastroenterologist
-Hemorrhoids,consume high-fiber foods,drink plenty of fluids,avoid straining during bowel movements,use sitz baths
-Common Cold,stay hydrated,use a humidifier,rest and recover,avoid cold exposure
-Chickenpox,avoid scratching,use calamine lotion,bathe in lukewarm water,consult a doctor if severe
-Cervical Spondylosis,practice good posture,perform neck exercises,apply hot or cold packs,seek medical advice
-Hyperthyroidism,avoid iodine-rich food,manage stress,consult a doctor,consider radioactive iodine treatment
-Urinary Tract Infection,stay hydrated,practice good hygiene,consume cranberry juice,consult a doctor
-Varicose Veins,elevate legs while resting,avoid prolonged standing,wear compression stockings,stay active
-AIDS,practice safe sex,avoid sharing needles,maintain a healthy lifestyle,consult a specialist regularly
-Paralysis (Brain Hemorrhage),attend physical therapy,eat nutrient-rich food,follow medical advice,get regular checkups
-Typhoid,consume easily digestible foods,complete prescribed antibiotics,stay hydrated,practice hygiene
-Hepatitis B,get vaccinated,practice safe sex,avoid alcohol,consult a hepatologist
-Fungal Infection,keep the area dry,avoid tight clothing,use antifungal cream,maintain good hygiene
-Hepatitis C,avoid sharing personal items,get vaccinated,consult a specialist,follow medication
-Migraine,reduce stress,follow a consistent sleep schedule,avoid triggers like caffeine,consult a neurologist
-Bronchial Asthma,identify and avoid triggers,use prescribed inhalers,stay active but avoid overexertion,seek medical attention for severe episodes
-Alcoholic Hepatitis,stop alcohol consumption,eat a balanced diet,consult a doctor,follow regular checkups
-Jaundice,stay hydrated,eat liver-friendly foods,avoid alcohol,consult a specialist
-Hepatitis E,avoid alcohol,maintain proper hygiene,stay hydrated,consult a doctor
-Dengue,stay hydrated,consume papaya leaf extract,avoid mosquito bites,consult a doctor if symptoms worsen
-Hepatitis D,get vaccinated,avoid alcohol,maintain a healthy diet,consult a hepatologist
-Heart Attack,call emergency services,chew aspirin,stay calm and still,follow up with cardiologist
-Pneumonia,complete prescribed antibiotics,rest adequately,drink warm fluids,consult a doctor if symptoms persist
-Arthritis,stay active with joint-friendly exercises,use heat or cold therapy,maintain a healthy weight,consult a rheumatologist
-Gastroenteritis,drink oral rehydration solution,eat bland food,avoid dairy temporarily,rest
-Tuberculosis,complete the prescribed treatment,avoid crowded places,eat nutrient-rich food,consult a pulmonologist
+Common Cold,stay hydrated,get adequate rest,avoid close contact,maintain hygiene
+Flu (Influenza),isolation,bed rest,wear mask,drink fluids
+COVID-19,isolation,wear N95 mask,sanitize regularly,monitor oxygen levels
+Asthma,avoid triggers,carry inhaler,regular check-ups,air purification
+Allergies,identify triggers,keep windows closed,use air purifiers,take medications regularly
+Sinusitis,steam inhalation,avoid cold foods,rest,nasal hygiene
+Bronchitis,stop smoking,avoid pollutants,humidify air,rest
+Pneumonia,complete antibiotics,bed rest,deep breathing exercises,monitor temperature
+Tonsillitis,gargle salt water,complete antibiotics,soft diet,avoid cold foods
+Urinary Tract Infection,drink water,urinate frequently,maintain hygiene,avoid holding urine
+Kidney Stones,drink water,limit salt intake,moderate protein,avoid oxalate foods
+Appendicitis,avoid self-medication,immediate medical care,no food or drink,monitor fever
+Diabetes,regular monitoring,controlled diet,exercise regularly,foot care
+Hypertension,reduce salt intake,regular exercise,stress management,monitor blood pressure
+Anemia,iron-rich diet,regular check-ups,take supplements,avoid tea with meals
+Hypothyroidism,regular medication,thyroid monitoring,healthy diet,exercise regularly
+Hyperthyroidism,avoid iodine foods,take medications,regular check-ups,stress management
+Chickenpox,isolation,prevent scratching,calamine lotion,hygiene care
+Measles,isolation,rest,vitamin A supplements,monitor fever
+Dengue,prevent mosquito bites,rest,hydration,monitor platelets
+Malaria,mosquito protection,complete medication,regular testing,environmental control
+Typhoid,complete antibiotics,isolation,proper sanitation,boiled water only
+Gastroenteritis,hydration,oral rehydration,bland diet,hand hygiene
+Irritable Bowel Syndrome,identify triggers,stress management,regular exercise,dietary modifications
+Peptic Ulcer,avoid spicy foods,eat regularly,stress reduction,avoid alcohol
+Arthritis,gentle exercise,weight management,joint protection,physical therapy
+Osteoporosis,fall prevention,safe exercise,calcium intake,bone density tests
+Migraine,identify triggers,stress management,regular sleep,preventive medication
+Epilepsy,regular medication,avoid triggers,adequate sleep,safety precautions
+Parkinson's Disease,physical therapy,fall prevention,regular exercise,medication compliance
+Stroke,blood pressure control,exercise,healthy diet,regular check-ups
+Alzheimer's Disease,safety-proof home,regular routine,social engagement,caregiver support
+Hepatitis,avoid alcohol,complete medication,regular monitoring,prevent transmission
+Liver Disease,avoid alcohol,low-salt diet,medication compliance,regular monitoring
+Celiac Disease,strict gluten-free diet,read labels carefully,avoid cross-contamination,regular check-ups
+Rheumatoid Arthritis,joint protection,regular exercise,stress management,medication compliance
+Psoriasis,avoid triggers,moisturize regularly,sun protection,stress management
+Eczema,moisturize frequently,avoid triggers,gentle skin care,stress management
+Shingles,keep rash covered,avoid scratching,stress reduction,pain management
+Hypoglycemia,regular meals,carry glucose,monitor blood sugar,medical alert bracelet
+Hyperglycemia,regular monitoring,medication compliance,proper diet,exercise regularly
+Stress,regular exercise,adequate sleep,relaxation techniques,time management
+Vitamin D Deficiency,sun exposure,supplement intake,regular testing,calcium-rich diet
+Scabies,complete treatment,wash bedding,treat close contacts,avoid scratching
+Conjunctivitis,hand hygiene,avoid touching eyes,separate towels,complete medication
+Vertigo,avoid sudden movements,home safety measures,regular exercise,stress management
+Otitis Media,complete antibiotics,avoid water entry,follow-up care,pain management
+Acne,gentle cleansing,avoid picking,regular face wash,stress management
+Cold Sore,avoid touching,prevent spreading,stress management,sun protection
+Blister,keep clean,avoid popping,protective covering,monitor infection
+Hives,identify triggers,avoid scratching,cool compress,antihistamine use
+Actinic Keratosis,sun protection,regular screening,skin monitoring,avoid tanning
+Rosacea,identify triggers,gentle skin care,sun protection,stress management
+Carbuncle,keep clean,warm compress,complete antibiotics,monitor spread
+Latex Allergy,avoid latex,medical alert bracelet,inform healthcare providers,carry epinephrine
+Cellulitis,complete antibiotics,elevate area,rest,monitor spread
+Melasma,sun protection,avoid triggers,gentle skin care,follow treatment plan
+Basal Cell Carcinoma,sun protection,regular screening,prompt treatment,follow-up care
+Squamous Cell Carcinoma,sun protection,regular checks,prompt treatment,monitoring
+Melanoma,sun protection,regular screening,self-examination,prompt treatment
+Lupus,sun protection,stress management,regular check-ups,medication compliance
+Seborrheic Eczema,gentle cleansing,avoid triggers,regular treatment,stress management
+Keratosis Pilaris,gentle exfoliation,moisturize regularly,avoid hot showers,patience with treatment
+Ringworm,complete treatment,avoid sharing items,keep area dry,monitor spread

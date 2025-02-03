@@ -1,42 +1,65 @@
 Disease,Description
-Fungal infection,Fungal infection is a common skin condition caused by fungi.
-Allergy,Allergy is an immune system reaction to a substance in the environment.
-GERD,GERD (Gastroesophageal Reflux Disease) is a digestive disorder that affects the lower esophageal sphincter.
-Chronic cholestasis,Chronic cholestasis is a condition where bile flow from the liver is reduced for a prolonged period.
-Drug Reaction,Drug Reaction occurs when the body reacts adversely to a medication.
-Peptic ulcer disease,Peptic ulcer disease involves sores that develop on the inner lining of the stomach and small intestine.
-AIDS,AIDS (Acquired Immunodeficiency Syndrome) is a disease caused by HIV that weakens the immune system.
-Diabetes,Diabetes is a chronic condition that affects how the body processes blood sugar.
-Gastroenteritis,"Gastroenteritis is an inflammation of the stomach and intestines, typically caused by a virus or bacteria."
-Bronchial Asthma,Bronchial Asthma is a respiratory condition characterized by inflammation of the airways.
-Hypertension,"Hypertension, or high blood pressure, is a common cardiovascular condition."
-Migraine,Migraine is a type of headache that often involves severe pain and sensitivity to light and sound.
-Cervical spondylosis,Cervical spondylosis is a degenerative condition of the cervical spine.
-Paralysis (brain hemorrhage),Paralysis (brain hemorrhage) refers to the loss of muscle function due to bleeding in the brain.
-Jaundice,"Jaundice is a yellow discoloration of the skin and eyes, often indicating liver problems."
-Malaria,Malaria is a mosquito-borne infectious disease affecting humans and other animals.
-Chicken pox,Chicken pox is a highly contagious viral infection causing an itchy rash.
-Dengue,Dengue is a mosquito-borne viral infection causing flu-like symptoms.
-Typhoid,Typhoid is a bacterial infection that can lead to a high fever and gastrointestinal symptoms.
-hepatitis A,hepatitis A is a viral liver disease.
-Hepatitis B,Hepatitis B is a viral infection that attacks the liver.
-Hepatitis C,Hepatitis C is a viral infection that causes liver inflammation.
-Hepatitis D,Hepatitis D is a serious liver disease caused by the hepatitis D virus.
-Hepatitis E,Hepatitis E is a viral infection that causes liver inflammation.
-Alcoholic hepatitis,Alcoholic hepatitis is inflammation of the liver due to alcohol consumption.
-Tuberculosis,Tuberculosis is a bacterial infection that primarily affects the lungs.
-Common Cold,Common Cold is a viral infection of the upper respiratory tract.
-Pneumonia,Pneumonia is an inflammatory condition affecting the air sacs in the lungs.
-Dimorphic hemmorhoids(piles),Dimorphic hemmorhoids(piles) is a condition characterized by swollen blood vessels in the rectum.
-Heart attack,Heart attack is a sudden and severe reduction in blood flow to the heart muscle.
-Varicose veins,"Varicose veins are enlarged, twisted veins that usually appear on the legs."
-Hypothyroidism,Hypothyroidism is a condition where the thyroid gland doesn't produce enough thyroid hormone.
-Hyperthyroidism,Hyperthyroidism is a condition where the thyroid gland produces too much thyroid hormone.
-Hypoglycemia,Hypoglycemia is a condition characterized by abnormally low blood sugar levels.
-Osteoarthristis,Osteoarthristis is a degenerative joint disease that affects the cartilage in joints.
-Arthritis,"Arthritis is inflammation of one or more joints, causing pain and stiffness."
-(vertigo) Paroymsal Positional Vertigo,(Vertigo) Paroxysmal Positional Vertigo is a type of dizziness caused by specific head movements.
-Acne,Acne is a skin condition that occurs when hair follicles become clogged with oil and dead skin cells.
-Urinary tract infection,Urinary tract infection is an infection in any part of the urinary system.
-Psoriasis,"Psoriasis is a chronic skin condition characterized by red, itchy, and scaly patches."
-Impetigo,Impetigo is a highly contagious skin infection causing red sores that can break open.
+Common Cold,A viral infection of the upper respiratory tract that typically causes congestion, sneezing, and mild body aches, usually resolving within 7-10 days.
+Flu (Influenza),A contagious respiratory illness caused by influenza viruses that affects the nose, throat, and lungs, characterized by sudden onset of severe symptoms.
+COVID-19,A respiratory illness caused by the SARS-CoV-2 virus that can range from mild to severe, with unique symptoms including loss of taste and smell.
+Asthma,A chronic respiratory condition where airways become inflamed and narrow, making breathing difficult, often triggered by environmental factors or stress.
+Allergies,An overreaction of the immune system to normally harmless substances, causing various symptoms in the respiratory system and skin.
+Sinusitis,Inflammation of the sinus cavities causing pressure, pain, and congestion, often following a cold or allergic reaction.
+Bronchitis,Inflammation of the bronchial tubes that carry air to the lungs, causing coughing and mucus production.
+Pneumonia,An infection that inflames air sacs in the lungs, which can fill with fluid, causing severe respiratory symptoms.
+Tonsillitis,Inflammation of the tonsils, usually due to viral or bacterial infection, causing throat pain and swallowing difficulty.
+Urinary Tract Infection,A bacterial infection affecting any part of the urinary system, most commonly occurring in the bladder and urethra.
+Kidney Stones,Hard deposits made of minerals and salts that form inside the kidneys, causing severe pain when passing through the urinary tract.
+Appendicitis,Inflammation of the appendix causing severe abdominal pain, requiring immediate medical attention and often surgery.
+Diabetes,A chronic metabolic disorder affecting how the body processes blood sugar, either due to insufficient insulin production or insulin resistance.
+Hypertension,A chronic condition of elevated blood pressure that can lead to serious health complications if left untreated.
+Anemia,A condition where the blood lacks enough healthy red blood cells to carry adequate oxygen to tissues.
+Hypothyroidism,A condition where the thyroid gland doesn't produce enough thyroid hormone, slowing down metabolism.
+Hyperthyroidism,A condition where the thyroid gland produces excess thyroid hormone, accelerating metabolism.
+Chickenpox,A highly contagious viral infection causing an itchy rash of fluid-filled blisters, primarily affecting children.
+Measles,A highly contagious viral infection characterized by a distinctive rash and respiratory symptoms.
+Dengue,A mosquito-borne viral infection causing severe flu-like symptoms and potentially life-threatening complications.
+Malaria,A serious parasitic disease transmitted by mosquitoes, causing cycles of fever, chills, and flu-like symptoms.
+Typhoid,A bacterial infection spread through contaminated food and water, causing high fever and gastrointestinal symptoms.
+Gastroenteritis,Inflammation of the digestive system, usually caused by viral or bacterial infection, leading to diarrhea and vomiting.
+Irritable Bowel Syndrome,A chronic disorder affecting the large intestine, causing abdominal pain and altered bowel habits.
+Peptic Ulcer,An open sore that develops on the inner lining of the stomach or small intestine, causing pain and digestive issues.
+Arthritis,Inflammation of one or more joints causing pain and stiffness that typically worsens with age.
+Osteoporosis,A bone disease where decreased bone density leads to increased risk of fractures.
+Migraine,A neurological condition causing severe, recurring headaches often accompanied by other debilitating symptoms.
+Epilepsy,A neurological disorder characterized by recurrent, unprovoked seizures due to abnormal brain activity.
+Parkinson's Disease,A progressive nervous system disorder affecting movement, causing tremors and mobility issues.
+Stroke,A medical emergency where blood supply to part of the brain is interrupted, causing rapid loss of brain function.
+Alzheimer's Disease,A progressive brain disorder that slowly destroys memory and thinking skills, affecting daily activities.
+Hepatitis,Inflammation of the liver typically caused by viral infection or other factors, affecting liver function.
+Liver Disease,A broad term for various conditions affecting the liver's ability to function properly.
+Celiac Disease,An autoimmune disorder where eating gluten leads to damage in the small intestine.
+Rheumatoid Arthritis,An autoimmune disorder causing inflammation in joints, leading to painful swelling and joint deformity.
+Psoriasis,A chronic skin condition causing rapid buildup of cells, resulting in scaling and inflammation.
+Eczema (Atopic Dermatitis),A chronic inflammatory skin condition causing itchy, red, swollen, and cracked skin.
+Shingles,A viral infection causing a painful rash, caused by reactivation of the chickenpox virus.
+Hypoglycemia,A condition where blood sugar drops below normal levels, causing various symptoms.
+Hyperglycemia,Elevated blood sugar levels, often associated with diabetes or pre-diabetes.
+Stress,A physical and emotional response to life demands, causing various physical and psychological symptoms.
+Vitamin D Deficiency,A condition resulting from inadequate vitamin D levels, affecting bone health and other body systems.
+Scabies,A skin infestation caused by tiny mites, leading to intense itching and rash.
+Conjunctivitis,Inflammation of the conjunctiva of the eye, causing redness and discomfort, commonly known as pink eye.
+Vertigo,A sensation of dizziness where a person feels they or their surroundings are spinning or moving.
+Otitis Media,Infection or inflammation of the middle ear, common in children, causing ear pain and hearing difficulties.
+Acne,A skin condition occurring when hair follicles become plugged with oil and dead skin cells.
+Cold Sore,A viral infection causing small, painful blisters around the mouth, caused by the herpes simplex virus.
+Blister,A fluid-filled pocket that forms between the upper layers of skin, usually due to friction or burns.
+Hives,A skin reaction causing itchy welts, often triggered by an allergic reaction.
+Actinic Keratosis,A rough, scaly patch on the skin caused by years of sun exposure, potentially precancerous.
+Rosacea,A chronic inflammatory skin condition causing redness and visible blood vessels in the face.
+Carbuncle,A cluster of boils forming a connected area of infection under the skin.
+Latex Allergy,An immune system reaction to proteins found in natural rubber latex.
+Cellulitis,A bacterial skin infection affecting deeper layers of skin and soft tissues.
+Melasma,A common skin condition causing brown to gray-brown patches on the face.
+Basal Cell Carcinoma,The most common type of skin cancer, usually appearing as a waxy bump.
+Squamous Cell Carcinoma,A common form of skin cancer developing in the squamous cells of the skin's outer layer.
+Melanoma,The most serious type of skin cancer, developing from pigment-producing cells.
+Lupus,A systemic autoimmune disease that occurs when the body's immune system attacks its own tissues.
+Seborrheic Eczema,A common skin condition causing scaly patches, red skin, and stubborn dandruff.
+Keratosis Pilaris,A harmless skin condition causing rough patches and tiny bumps, usually on the arms.
+Ringworm,A fungal infection causing a ring-shaped rash on the skin, highly contagious.

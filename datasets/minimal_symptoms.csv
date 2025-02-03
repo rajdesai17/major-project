@@ -23,29 +23,46 @@ Chickenpox,fever,itchy_skin_rash,fluid-filled_blisters,fatigue
 Measles,fever,cough,runny_nose,red_rash
 Dengue,fever,severe_headache,muscle_pain,rash
 Malaria,fever,chills,sweating,headache
-Typhoid,high_fever,abdominal_pain,constipation,weakness
+Typhoid,high_fever,abdominal_pain,constipation,weakeness
 Gastroenteritis,nausea,vomiting,diarrhoea,abdominal_pain
-Irritable Bowel Syndrome,abdominal_pain,bloating,diarrhoea,constipation
-Peptic Ulcer,abdominal_pain,bloating,nausea,heartburn
-Arthritis,joint_pain,stiffness,swelling,limited_movement
-Osteoporosis,bone_pain,fragility,loss_of_height,back_pain
-Migraine,headache,nausea,sensitivity_to_light,blurred_vision
-Epilepsy,seizures,confusion,loss_of_consciousness,jerking_movements
-Parkinson’s Disease,tremors,stiffness,slow_movement,loss_of_balance
-Stroke,slurred_speech,weakness_on_one_side,sudden_confusion,sudden_headache
-Alzheimer’s Disease,memory_loss,confusion,personality_changes,difficulty_speaking
-Hepatitis,jaundice,abdominal_pain,fatigue,loss_of_appetite
-Liver Disease,abdominal_pain,jaundice,swelling,fatigue
-Celiac Disease,diarrhoea,weight_loss,bloating,abdominal_pain
-Rheumatoid Arthritis,joint_pain,swelling,morning_stiffness,fatigue
-Psoriasis,red_skin_patches,scaling,itching,cracked_skin
-Eczema,itchy_skin,redness,dryness,blisters
-Shingles,painful_rash,blisters,itching,fever
-Hypoglycemia,sweating,shakiness,confusion,hunger
-Hyperglycemia,frequent_urination,thirst,blurred_vision,fatigue
-Stress,anxiety,fatigue,headache,mood_swings
-Vitamin D Deficiency,bone_pain,fatigue,muscle_weakness,mood_changes
-Scabies,itchy_skin,rash,blisters,sores
-Conjunctivitis,red_eyes,itching,tearing,discharge
-Vertigo,dizziness,nausea,loss_of_balance,ringing_in_ears
-Otitis Media,ear_pain,hearing_loss,fever,irritability
+Irritable Bowel Syndrome,bloating,constipation,digestive_discomfort,nausea
+Peptic Ulcer,bloating,nausea,dyspepsia,vomiting
+Arthritis,joint_pain,stiffness,inflammation,lack_of_mobility
+Osteoporosis,bone_pain,height_loss,frailty,bone_fractures
+Migraine,sensitivity_to_light,nausea,vomiting,pounding_headache 
+Epilepsy,seizures,aura,lost_consciousness,muscle_spasms 
+Parkinson’s Disease,tremors,ridged_skin,speech_changes,muscle_stiffness 
+Stroke,sudden_headache,speech_difficulty,motor_control_loss,numbness 
+Alzheimer’s Disease,memory_loss,difficulty_with_language,judgment_impairment,challenges_with_daily_tasks 
+Hepatitis,jaundice,fatigue,nausea,liver_enlargement 
+Liver Disease,jaundice,fatigue,right_upper_quadrant_pain,nausea 
+Celiac Disease,nausea,bloating,constipation,digestive_distress 
+Rheumatoid Arthritis,joint_swelling,morning_stiffness,fatigue,joint_deformity 
+Psoriasis,dry_red_patches,silvery_scaling,itching,burning_sensation 
+Eczema (Atopic Dermatitis),itchy_skin,rash,inflammation,dryness 
+Shingles,painful_rash,itching,burning_sensation,fatigue 
+Hypoglycemia,sweating,tremors,hunger,dizziness 
+Hyperglycemia,increased_thirst,frequent_urination,fatigue,nausea 
+Stress,mood_swings,fatigue,difficulty_concentrating,sleep_disturbances 
+Vitamin D Deficiency,bone_pain,muscle_weakness,fatigue,depression 
+Scabies,intense_itching,rash,inflammation,sore_spots 
+Conjunctivitis,reddened_eyes,itching,tearing,pus_discharge 
+Vertigo,dizziness,nausea,lost_balance,tinnitus 
+Otitis Media,pain_in_ear,tinnitus,nasal_congestion,coughing 
+Acne,pimples,cysts,oily_skin,inflammation 
+Cold Sore,painful_bump,on_lips,tenderness,_burning_sensation 
+Blister,warmth_on_skin,painful_swelling,_fluid-filled_area  
+Hives,itchy_welts,_red_or_skin_color_change,_swelling  
+Actinic Keratosis,_rough_patch_on_skin,_scaly_area,_pink_or_red_color  
+Rosacea,_facial_flushing,_red_bumps,_dry_skin,_sensitivity  
+Carbuncle,_painful_lump,_fever,_fatigue,_oozing  
+Latex Allergy,_itchy_rash,_hives,_swelling,_difficulty_breathing  
+Cellulitis,painful_swelling,_redness,_warmth_on_skin,_fever  
+Melasma,dark_patches_on_face,_skin_discoloration,_irregular_edges  
+Basal Cell Carcinoma,pink_or_red_shiny_area,_bleeding_wound,_crater-like_center  
+Squamous Cell Carcinoma,recurrent_wound,_scaly_patch_on_skin,_bleeding_growth  
+Melanoma,variegated_mole,_irregular_shape,_color_changes  
+Lupus,butterfly_rash,fatigue,joint_pain,sensitivity_to_sunlight  
+Seborrheic Eczema,yellow_flaky_scales,on_scalp_or_face,_itchy_red_spots  
+Keratosis Pilaris,bumpy_skin_on_arms_and_thighs,_rough_texture  
+Ringworm,circular_rash_with_clear_center,itchy_skin  
