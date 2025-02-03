@@ -92,10 +92,12 @@ def get_predicted_value(user_symptoms):
 def helper(dis):
     """Get disease information"""
     try:
-        # Get description (working correctly - keep as reference)
-        dis_des = description[description['Disease'] == dis]['Description'].iloc[0] if not description[description['Disease'] == dis].empty else ""
+        # Get description - case insensitive matching
+        dis_des = description[description['Disease'].str.lower() == dis.lower()]['Description'].iloc[0] \
+            if not description[description['Disease'].str.lower() == dis.lower()].empty \
+            else "No description available"
         
-        # Get precautions - fix format
+        # Get precautions
         prec_df = precautions[precautions['Disease'] == dis]
         my_precautions = []
         if not prec_df.empty:
@@ -103,59 +105,77 @@ def helper(dis):
             for i in range(1, 5):
                 prec = prec_df[f'Precaution_{i}'].iloc[0]
                 if isinstance(prec, str) and prec.strip():
-                    my_precautions.append(prec.strip())
+                    my_precautions.append(prec.strip().capitalize())
         
-        # Get medications - fix format
+        # Get medications
         med_df = medications[medications['Disease'] == dis]
         if not med_df.empty:
-            meds = med_df['Medication'].iloc[0]
-            if isinstance(meds, str):
-                meds = [m.strip() for m in meds.split(';') if m.strip()]
+            meds_str = med_df['Medication'].iloc[0]
+            if isinstance(meds_str, str):
+                # Split by semicolon and clean each medication
+                meds = [med.strip().capitalize() for med in meds_str.split(';') if med.strip()]
             else:
-                meds = []
+                meds = ["Consult a doctor for appropriate medications"]
         else:
-            meds = []
+            meds = ["Consult a doctor for appropriate medications"]
         
-        # Get diet - fix format
+        # Get diet recommendations
         diet_df = diets[diets['Disease'] == dis]
         if not diet_df.empty:
-            diet = diet_df['Diet'].iloc[0]
-            if isinstance(diet, str):
-                diet = [d.strip() for d in diet.split(';') if d.strip()]
+            diet_str = diet_df['Diet'].iloc[0]
+            if isinstance(diet_str, str):
+                # Split by semicolon and clean each diet item
+                diet = [d.strip().capitalize() for d in diet_str.split(';') if d.strip()]
             else:
-                diet = []
+                diet = ["Follow a balanced diet as recommended by your healthcare provider"]
         else:
-            diet = []
+            diet = ["Follow a balanced diet as recommended by your healthcare provider"]
         
-        # Get workout (working correctly - keep as reference)
-        work = workout[workout['disease'] == dis]['workout'].tolist()
+        # Get workout
+        workout_df = workout[workout['disease'] == dis]
+        if not workout_df.empty:
+            work = [w.strip().capitalize() for w in workout_df['workout'].tolist() if w.strip()]
+        else:
+            work = ["Consult your healthcare provider for appropriate exercise recommendations"]
         
         return dis_des, my_precautions, meds, diet, work
 
     except Exception as e:
         print(f"Helper function detailed error:", e)
-        return "", [], [], [], []
+        return ("No description available", 
+                ["Consult a healthcare provider"], 
+                ["Consult a doctor for medications"], 
+                ["Follow a balanced diet"], 
+                ["Consult for exercise recommendations"])
 
 def generate_gemini_response(user_input, symptoms):
     """Generate AI response based on medical symptoms"""
     if not symptoms:
         return "Please describe your specific health symptoms first."
     
-    allowed_symptoms_str = ', '.join(set(all_symptoms))
+    # Convert symptoms list to string
+    symptoms_str = ', '.join(symptoms)
     
-    prompt = f"""Medical Symptom Assistant Guidelines:
-    - Only discuss symptoms related to the following: {allowed_symptoms_str}
-    - User's symptoms: {', '.join(symptoms)}
-    - User's query: {user_input}
-    
-    Provide a concise, informative medical response focusing strictly on the symptoms and potential health conditions."""
+    prompt = f"""As a medical assistant, help the user understand their health condition based on these symptoms: {symptoms_str}
+
+User question: {user_input}
+
+Guidelines for response:
+1. Focus on the specific symptoms mentioned
+2. Provide clear, concise medical information
+3. Avoid making definitive diagnoses
+4. Suggest general precautions if appropriate
+5. Recommend consulting a healthcare professional for serious concerns
+
+Please respond in a helpful and informative way."""
 
     try:
         model = genai.GenerativeModel('gemini-pro')
         response = model.generate_content(prompt)
-        return response.text.strip() or "I can only discuss medical symptoms based on our predefined list."
+        return response.text.strip() or "I apologize, but I need more specific information about your symptoms to provide a helpful response."
     except Exception as e:
-        return "Sorry, I can only discuss medical symptoms at the moment."
+        print(f"Gemini API error: {str(e)}")
+        return "I apologize, but I'm having trouble processing your request at the moment. Please try again."
 
 # Routes
 @app.route("/")
@@ -181,30 +201,21 @@ def predict():
         
         # Get disease details
         try:
-            result = helper(predicted_disease)
-            if not result:
-                return render_template('index.html', message="No information found for this disease")
+            dis_des, precautions, medications, rec_diet, workout_list = helper(predicted_disease)
             
-            dis_des, precautions, medications, rec_diet, workout = result
-            
-            # Prepare precautions
-            my_precautions = []
-            for precaution_list in precautions:
-                my_precautions.extend(precaution_list)
-
             # Calculate severity
             severity_score = calculate_severity_score(user_symptoms)
             severity_level = get_severity_level(severity_score)
-
+            
             return render_template('index.html', 
-                                   predicted_disease=predicted_disease, 
-                                   dis_des=dis_des,
-                                   my_precautions=my_precautions, 
-                                   medications=medications, 
-                                   my_diet=rec_diet,
-                                   workout=workout,
-                                   severity_level=severity_level,
-                                   severity_score=severity_score)
+                               predicted_disease=predicted_disease.title(), 
+                               dis_des=dis_des,
+                               my_precautions=precautions, 
+                               medications=medications, 
+                               my_diet=rec_diet,
+                               workout=workout_list,
+                               severity_level=severity_level,
+                               severity_score=severity_score)
         
         except Exception as e:
             print(f"Error processing disease details: {e}")
@@ -214,14 +225,26 @@ def predict():
 
 @app.route('/chat', methods=['POST'])
 def chat():
-    user_input = request.form.get('message', '')
-    symptoms = request.form.get('symptoms', '').split(',')
-    
-    # Clean and validate symptoms
-    symptoms = [sym.strip().lower() for sym in symptoms if sym.strip()]
-    
-    response = generate_gemini_response(user_input, symptoms)
-    return jsonify({'response': response})
+    try:
+        user_input = request.form.get('message', '')
+        symptoms_str = request.form.get('symptoms', '')
+        
+        # Handle empty symptoms
+        if not symptoms_str:
+            return jsonify({'response': 'Please enter your symptoms in the main input field first.'})
+        
+        # Clean and validate symptoms
+        symptoms = [sym.strip().lower() for sym in symptoms_str.split(',') if sym.strip()]
+        
+        # Generate response
+        response = generate_gemini_response(user_input, symptoms)
+        
+        # Return JSON response
+        return jsonify({'response': response or 'I apologize, but I could not process your request.'})
+        
+    except Exception as e:
+        print(f"Chat error: {str(e)}")  # Log the error
+        return jsonify({'response': 'An error occurred while processing your request. Please try again.'}), 500
 
 # Additional routes
 @app.route('/about')
