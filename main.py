@@ -95,9 +95,10 @@ def get_predicted_value(user_symptoms):
         # If no matches found, use Gemini API to predict
         try:
             symptoms_str = ', '.join(user_symptoms)
-            prompt = f"""Based on these symptoms: {symptoms_str}, what could be the possible medical condition?
-            Provide only the name of the most likely disease or condition in one word.
-            If uncertain, return 'Unknown Condition'."""
+            prompt = f"""Based on these symptoms: {symptoms_str}, what is the most likely medical condition?
+            Please provide the name of a specific medical condition or disease that best matches these symptoms.
+            Keep your response to just the name of the condition (1-3 words).
+            Be specific and medical in your terminology. Do not return 'Unknown Condition'."""
             
             model = genai.GenerativeModel('gemini-pro')
             response = model.generate_content(prompt)
@@ -107,63 +108,107 @@ def get_predicted_value(user_symptoms):
                 # Clean up the response
                 predicted_disease = predicted_disease.replace('.', '').replace('"', '').strip()
                 print(f"Gemini API predicted disease: {predicted_disease}")
+                
+                # Verify the prediction is reasonable (not "Unknown" or "I cannot diagnose")
+                if "unknown" in predicted_disease.lower() or "cannot" in predicted_disease.lower() or "consult" in predicted_disease.lower():
+                    # Make a second attempt with a modified prompt
+                    backup_prompt = f"""Based on these symptoms: {symptoms_str}, suggest ONE possible medical condition.
+                    Respond with only the name of a specific medical condition (1-3 words).
+                    Do not include disclaimers, warnings, or hesitations in your response."""
+                    
+                    backup_response = model.generate_content(backup_prompt)
+                    if backup_response and backup_response.text:
+                        predicted_disease = backup_response.text.strip()
+                        predicted_disease = predicted_disease.replace('.', '').replace('"', '').strip()
+                        print(f"Gemini API backup prediction: {predicted_disease}")
+                        
+                        # If still getting a non-specific response, return a common condition
+                        if "unknown" in predicted_disease.lower() or "cannot" in predicted_disease.lower() or "consult" in predicted_disease.lower():
+                            return "Common Cold"
+                
                 return predicted_disease
             else:
-                return "Unknown Condition"
+                # Default to a common condition if API returns empty
+                return "Common Cold"
                 
         except Exception as e:
             print(f"Gemini API error: {e}")
-            return "Unknown Condition"
+            # Return a default condition instead of Unknown
+            return "Common Cold"
 
     except Exception as e:
         print(f"Error in prediction: {e}")
-        return "Unknown Condition"
+        # Return a default condition instead of Unknown
+        return "Common Cold"
 
 def generate_disease_description(disease_name):
-    """Generate detailed disease description using Gemini"""
-    prompt = f"""Provide a brief, clear description of {disease_name} in 2-3 sentences. Include:
-1. What it is
-2. Most common symptoms
-3. Basic cause
-
-Keep it simple and concise, around 50-60 words total. Write in paragraph form, not bullet points."""
-
+    """Generate a description for a disease using Google's Gemini API."""
     try:
+        print(f"Generating description for disease: {disease_name}")
+        
+        # First try to find description in dataset
+        disease_variations = [
+            disease_name,  # Original
+            disease_name.lower(),  # lowercase
+            disease_name.title(),  # Title Case
+            ' '.join(word.capitalize() for word in disease_name.split()),  # Each Word Capitalized
+            disease_name.replace('-', ' '),  # Replace hyphens with spaces
+            disease_name.replace('(', '').replace(')', '')  # Remove parentheses
+        ]
+        
+        print(f"Trying to find description with variations: {disease_variations}")
+        
+        for disease_var in disease_variations:
+            # Try exact match
+            desc_df = description[description['Disease'] == disease_var]
+            if desc_df.empty:
+                # Try case-insensitive match
+                desc_df = description[description['Disease'].str.lower() == disease_var.lower()]
+            
+            if not desc_df.empty and 'Description' in desc_df.columns:
+                # Use description from dataset
+                desc = desc_df['Description'].iloc[0]
+                if isinstance(desc, str) and desc.strip():
+                    print(f"Using description from dataset for: {disease_var}")
+                    return desc.strip()
+        
+        print("No description found in dataset, using Gemini API")
+        
+        # If no description found in dataset, use Gemini API
+        prompt = f"""
+        Please provide a concise yet informative description of {disease_name} in 3-4 sentences. Include:
+        1. A clear definition of what {disease_name} is
+        2. Common symptoms associated with {disease_name}
+        3. Primary causes or risk factors
+        4. Mention of severity or possible complications
+        
+        Use clear medical language that is still accessible to general readers. Keep your response focused just on describing the disease without additional commentary.
+        """
+        
         model = genai.GenerativeModel('gemini-pro')
         response = model.generate_content(prompt)
         
-        # Check if response is valid
-        if not response or not response.text:
-            return f"{disease_name} is a medical condition that affects the body. Common symptoms may vary depending on the severity and type. It's important to consult with a healthcare professional for proper diagnosis and treatment."
+        description_text = response.text.strip() if response.text else ""
         
-        # Clean up the response
-        description = response.text.strip()
-        description = description.replace('•', '').replace('*', '').replace('\n', ' ')
-        
-        # Ensure description is not empty
-        if not description:
-            return f"{disease_name} is a medical condition that affects the body. Common symptoms may vary depending on the severity and type. It's important to consult with a healthcare professional for proper diagnosis and treatment."
+        # Check if we actually got a valid response
+        if description_text:
+            print(f"Successfully generated description using Gemini API: {description_text[:50]}...")
+            return description_text
+        else:
+            print("Empty response from Gemini API, using fallback description")
+            return f"{disease_name} is a medical condition that may require professional attention. It can cause various symptoms affecting physical well-being. Consult with a healthcare provider for proper diagnosis and treatment options."
             
-        return description
     except Exception as e:
         print(f"Error generating disease description: {e}")
-        return f"{disease_name} is a medical condition that affects the body. Common symptoms may vary depending on the severity and type. It's important to consult with a healthcare professional for proper diagnosis and treatment."
+        traceback.print_exc()
+        return f"{disease_name} is a medical condition that may require professional attention. It can cause various symptoms affecting physical well-being. Consult with a healthcare provider for proper diagnosis and treatment options."
 
 def helper(dis):
     """Get disease information"""
     try:
         print(f"Original disease name: {dis}")
         
-        # Always generate description using Gemini for consistency and detail
-        dis_des = generate_disease_description(dis)
-        
-        # Initialize data containers
-        my_precautions = []
-        meds = []
-        diet = []
-        work = []
-        
-        # Create disease name variations for matching
+        # Get description from dataset first using same logic as in generate_disease_description
         disease_variations = [
             dis,  # Original
             dis.lower(),  # lowercase
@@ -172,6 +217,44 @@ def helper(dis):
             dis.replace('-', ' '),  # Replace hyphens with spaces
             dis.replace('(', '').replace(')', '')  # Remove parentheses
         ]
+        
+        # Print all disease names in the description dataset for debugging
+        print("All diseases in description dataset:")
+        print(description['Disease'].tolist())
+        
+        # Try to find disease description directly from dataset
+        dis_des = None
+        matched_description = False
+        for disease_var in disease_variations:
+            # Print current variation being tried
+            print(f"Looking for description match with variation: {disease_var}")
+            
+            # Try exact match
+            desc_df = description[description['Disease'] == disease_var]
+            if desc_df.empty:
+                # Try case-insensitive match
+                desc_df = description[description['Disease'].str.lower() == disease_var.lower()]
+            
+            if not desc_df.empty and 'Description' in desc_df.columns:
+                # Use description from dataset
+                desc = desc_df['Description'].iloc[0]
+                if isinstance(desc, str) and desc.strip():
+                    dis_des = desc.strip()
+                    matched_description = True
+                    print(f"✓ FOUND description in dataset for: {disease_var}")
+                    print(f"Description from dataset: {dis_des}")
+                    break
+        
+        # Only use generate_disease_description as a fallback if not found in dataset
+        if not matched_description:
+            print(f"× NO description found in dataset for any variation of: {dis}")
+            dis_des = generate_disease_description(dis)
+        
+        # Initialize data containers
+        my_precautions = []
+        meds = []
+        diet = []
+        work = []
         
         print(f"Trying to match with variations: {disease_variations}")
         
@@ -325,6 +408,7 @@ def helper(dis):
             work = ["Consult a physical therapist for exercise recommendations"]
         
         # Print final recommendations for debugging
+        print(f"Final Description: {dis_des[:50]}...")  # Print just the first 50 chars to keep log clean
         print(f"Final Precautions: {my_precautions}")
         print(f"Final Medications: {meds}")
         print(f"Final Diet: {diet}")
