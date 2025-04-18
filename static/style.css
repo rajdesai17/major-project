@@ -75,15 +75,11 @@ body {
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     z-index: 1000;
+    transition: transform 0.3s;
 }
 
 .chatbot-icon:hover {
     transform: scale(1.1);
-}
-
-.chatbot-icon::before {
-    content: '🤖';
-    font-size: 30px;
 }
 
 .chatbot-icon i {
