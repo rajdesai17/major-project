@@ -1,0 +1,148 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Medical Symptom Analyzer Project Rules
+
+## 1. Data Usage Rules
+
+### 1.1 Dataset Requirements
+- All predictions and recommendations MUST primarily use the provided datasets in the `datasets/` folder
+- The following datasets must be used for their specific purposes:
+  - `minimal_symptoms.csv`: For disease prediction based on symptoms
+  - `precautions_df.csv`: For precaution recommendations
+  - `medications.csv`: For medication suggestions
+  - `diets.csv`: For dietary recommendations
+  - `workout_df.csv`: For exercise/workout suggestions
+  - `description.csv`: For disease descriptions
+  - `minimal_severity.csv`: For symptom severity scoring
+
+### 1.2 Data Structure Compliance
+- Maintain the exact column structure of each dataset
+- For symptoms: Use lowercase, underscore-separated format (e.g., "high_fever")
+- For diseases: Use exact disease names as in the dataset
+- For recommendations: Follow the format of Precaution_1, Precaution_2, etc.
+
+## 2. Prediction Rules
+
+### 2.1 Symptom Requirements
+- Minimum 2 symptoms required for prediction
+- Maximum 10 symptoms allowed per prediction
+- Symptoms must be comma-separated in input
+- All symptoms must be converted to lowercase and underscore format
+
+### 2.2 Prediction Process
+1. First attempt: Match symptoms against `minimal_symptoms.csv`
+2. Second attempt: Use SVC model if available
+3. Final attempt: Use ChatGPT-4o model ONLY if no match found in datasets
+
+### 2.3 Output Format
+- Always prefix prediction with "Likely disease is: "
+- Include confidence score if available
+- List matching symptoms used for prediction
+- Provide severity assessment based on `minimal_severity.csv`
+
+## 3. Recommendation Rules
+
+### 3.1 Required Recommendations
+For each prediction, provide:
+1. Disease description (from `description.csv`)
+2. Precautions (from `precautions_df.csv`)
+3. Medications (from `medications.csv`)
+4. Diet suggestions (from `diets.csv`)
+5. Workout recommendations (from `workout_df.csv`)
+
+### 3.2 Recommendation Priority
+1. Use exact matches from datasets first
+2. If no exact match, try case-insensitive matching
+3. If still no match, use partial matching
+4. Only use AI-generated content as a last resort
+
+## 4. Code Quality Rules
+
+### 4.1 Code Structure
+- Use clean, functional programming approach
+- Implement proper error handling
+- Include detailed logging
+- Follow PEP 8 style guidelines
+- Use type hints for function parameters and returns
+
+### 4.2 Performance Requirements
+- Response time should be under 3 seconds
+- Handle concurrent requests efficiently
+- Cache frequently accessed data
+- Implement proper data validation
+
+## 5. User Interface Rules
+
+### 5.1 Input Requirements
+- Clear instructions for symptom input
+- Input validation for minimum 2 symptoms
+- Format suggestions for symptom entry
+- Error messages for invalid inputs
+
+### 5.2 Output Display
+- Clear disease prediction display
+- Organized sections for each recommendation type
+- Severity indicator
+- Source attribution for recommendations
+- Disclaimer about consulting healthcare professionals
+
+## 6. Testing Requirements
+
+### 6.1 Test Cases
+- Test with minimum 2 symptoms
+- Test with maximum 10 symptoms
+- Test with invalid inputs
+- Test with symptoms not in dataset
+- Test with all recommendation types
+
+### 6.2 Validation
+- Verify all recommendations come from datasets
+- Check severity calculations
+- Validate prediction accuracy
+- Test error handling
+
+## 7. Dataset Enhancement Rules
+
+### 7.1 Data Addition
+- Add new diseases with complete symptom sets
+- Include all required recommendation types
+- Maintain consistent formatting
+- Add severity scores for new symptoms
+
+### 7.2 Data Validation
+- Verify symptom-disease relationships
+- Check recommendation accuracy
+- Validate severity scores
+- Ensure no duplicate entries
+
+## 8. Error Handling Rules
+
+### 8.1 Required Error Messages
+- Insufficient symptoms
+- Invalid symptom format
+- No matching disease found
+- Missing recommendations
+- Dataset access errors
+
+### 8.2 Fallback Procedures
+- Use ChatGPT-4o for predictions only when necessary
+- Provide generic recommendations if specific ones unavailable
+- Log all fallback instances
+- Report fallback usage in output
+
+## 9. Documentation Requirements
+
+### 9.1 Code Documentation
+- Document all functions and classes
+- Explain dataset structures
+- Document prediction algorithms
+- Include usage examples
+
+### 9.2 User Documentation
+- Clear instructions for symptom input
+- Explanation of prediction process
+- Description of recommendation sources
+- Disclaimer about medical advice

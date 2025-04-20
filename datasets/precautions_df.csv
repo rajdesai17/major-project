@@ -1,0 +1,65 @@
+Disease,Precaution_1,Precaution_2,Precaution_3,Precaution_4
+Common Cold,stay hydrated,get adequate rest,avoid close contact,maintain hygiene
+Flu (Influenza),isolation,bed rest,wear mask,drink fluids
+COVID-19,isolation,wear N95 mask,sanitize regularly,monitor oxygen levels
+Asthma,avoid triggers,carry inhaler,regular check-ups,air purification
+Allergies,identify triggers,keep windows closed,use air purifiers,take medications regularly
+Sinusitis,steam inhalation,avoid cold foods,rest,nasal hygiene
+Bronchitis,stop smoking,avoid pollutants,humidify air,rest
+Pneumonia,complete antibiotics,bed rest,deep breathing exercises,monitor temperature
+Tonsillitis,gargle salt water,complete antibiotics,soft diet,avoid cold foods
+Urinary Tract Infection,drink water,urinate frequently,maintain hygiene,avoid holding urine
+Kidney Stones,drink water,limit salt intake,moderate protein,avoid oxalate foods
+Appendicitis,avoid self-medication,immediate medical care,no food or drink,monitor fever
+Diabetes,regular monitoring,controlled diet,exercise regularly,foot care
+Hypertension,reduce salt intake,regular exercise,stress management,monitor blood pressure
+Anemia,iron-rich diet,regular check-ups,take supplements,avoid tea with meals
+Hypothyroidism,regular medication,thyroid monitoring,healthy diet,exercise regularly
+Hyperthyroidism,avoid iodine foods,take medications,regular check-ups,stress management
+Chickenpox,isolation,prevent scratching,calamine lotion,hygiene care
+Measles,isolation,rest,vitamin A supplements,monitor fever
+Dengue,prevent mosquito bites,rest,hydration,monitor platelets
+Malaria,mosquito protection,complete medication,regular testing,environmental control
+Typhoid,complete antibiotics,isolation,proper sanitation,boiled water only
+Gastroenteritis,hydration,oral rehydration,bland diet,hand hygiene
+Irritable Bowel Syndrome,identify triggers,stress management,regular exercise,dietary modifications
+Peptic Ulcer,avoid spicy foods,eat regularly,stress reduction,avoid alcohol
+Arthritis,gentle exercise,weight management,joint protection,physical therapy
+Osteoporosis,fall prevention,safe exercise,calcium intake,bone density tests
+Migraine,identify triggers,stress management,regular sleep,preventive medication
+Epilepsy,regular medication,avoid triggers,adequate sleep,safety precautions
+Parkinson's Disease,physical therapy,fall prevention,regular exercise,medication compliance
+Stroke,blood pressure control,exercise,healthy diet,regular check-ups
+Alzheimer's Disease,safety-proof home,regular routine,social engagement,caregiver support
+Hepatitis,avoid alcohol,complete medication,regular monitoring,prevent transmission
+Liver Disease,avoid alcohol,low-salt diet,medication compliance,regular monitoring
+Celiac Disease,strict gluten-free diet,read labels carefully,avoid cross-contamination,regular check-ups
+Rheumatoid Arthritis,joint protection,regular exercise,stress management,medication compliance
+Psoriasis,avoid triggers,moisturize regularly,sun protection,stress management
+Eczema,moisturize frequently,avoid triggers,gentle skin care,stress management
+Shingles,keep rash covered,avoid scratching,stress reduction,pain management
+Hypoglycemia,regular meals,carry glucose,monitor blood sugar,medical alert bracelet
+Hyperglycemia,regular monitoring,medication compliance,proper diet,exercise regularly
+Stress,regular exercise,adequate sleep,relaxation techniques,time management
+Vitamin D Deficiency,sun exposure,supplement intake,regular testing,calcium-rich diet
+Scabies,complete treatment,wash bedding,treat close contacts,avoid scratching
+Conjunctivitis,hand hygiene,avoid touching eyes,separate towels,complete medication
+Vertigo,avoid sudden movements,home safety measures,regular exercise,stress management
+Otitis Media,complete antibiotics,avoid water entry,follow-up care,pain management
+Acne,gentle cleansing,avoid picking,regular face wash,stress management
+Cold Sore,avoid touching,prevent spreading,stress management,sun protection
+Blister,keep clean,avoid popping,protective covering,monitor infection
+Hives,identify triggers,avoid scratching,cool compress,antihistamine use
+Actinic Keratosis,sun protection,regular screening,skin monitoring,avoid tanning
+Rosacea,identify triggers,gentle skin care,sun protection,stress management
+Carbuncle,keep clean,warm compress,complete antibiotics,monitor spread
+Latex Allergy,avoid latex,medical alert bracelet,inform healthcare providers,carry epinephrine
+Cellulitis,complete antibiotics,elevate area,rest,monitor spread
+Melasma,sun protection,avoid triggers,gentle skin care,follow treatment plan
+Basal Cell Carcinoma,sun protection,regular screening,prompt treatment,follow-up care
+Squamous Cell Carcinoma,sun protection,regular checks,prompt treatment,monitoring
+Melanoma,sun protection,regular screening,self-examination,prompt treatment
+Lupus,sun protection,stress management,regular check-ups,medication compliance
+Seborrheic Eczema,gentle cleansing,avoid triggers,regular treatment,stress management
+Keratosis Pilaris,gentle exfoliation,moisturize regularly,avoid hot showers,patience with treatment
+Ringworm,complete treatment,avoid sharing items,keep area dry,monitor spread
